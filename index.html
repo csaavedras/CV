@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cami — Full Stack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { mono: ['JetBrains Mono', 'monospace'] },
+          colors: {
+            term: {
+              bg:       '#0d1117',
+              surface:  '#161b22',
+              border:   '#21262d',
+              text:     '#e6edf3',
+              muted:    '#8b949e',
+              blue:     '#58a6ff',
+              green:    '#3fb950',
+              orange:   '#f0883e',
+              yellow:   '#d29922',
+              pink:     '#f778ba',
+              purple:   '#d2a8ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'JetBrains Mono', monospace; }
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 14px;
+      background: #58a6ff;
+      animation: blink 1.2s step-end infinite;
+      vertical-align: -3px;
+      margin-left: 2px;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .tag {
+      display: inline-block;
+      border-radius: 4px;
+      padding: 1px 8px;
+      font-size: 11px;
+      margin: 2px 3px 2px 0;
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body class="bg-term-bg text-term-text min-h-screen">
+
+  <main class="max-w-3xl mx-auto px-6 py-10">
+
+    <!-- Window bar -->
+    <div class="flex items-center gap-2 mb-8 pb-4 border-b border-term-border">
+      <span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span>
+      <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+      <span class="w-3 h-3 rounded-full bg-[#28c840]"></span>
+      <span class="ml-auto text-term-muted text-xs">cami@dev ~ cv.sh</span>
+    </div>
+
+    <!-- ASCII name -->
+    <pre class="text-term-blue text-[11px] leading-tight mb-8 overflow-x-auto">  ██████╗ █████╗ ███╗   ███╗██╗
+ ██╔════╝██╔══██╗████╗ ████║██║
+ ██║     ███████║██╔████╔██║██║
+ ██║     ██╔══██║██║╚██╔╝██║██║
+ ╚██████╗██║  ██║██║ ╚═╝ ██║██║
+  ╚═════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝</pre>
+
+    <!-- whoami -->
+    <section class="mb-8">
+      <p class="mb-2 text-sm">
+        <span class="text-term-blue">cami</span><span class="text-term-muted">@</span><span class="text-term-green">dev</span><span class="text-term-muted">:</span><span class="text-term-blue">~</span><span class="text-term-text"> $ </span><span>cat whoami.json</span>
+      </p>
+      <div class="pl-6 text-sm">
+        <p class="text-term-muted">{</p>
+        <div class="pl-4 space-y-0.5">
+          <p><span class="text-term-purple">"name"</span><span class="text-term-muted">: </span><span class="text-term-green">"Camilo"</span><span class="text-term-muted">,</span></p>
+          <p><span class="text-term-purple">"role"</span><span class="text-term-muted">: </span><span class="text-term-green">"Full Stack Developer"</span><span class="text-term-muted">,</span></p>
+          <p><span class="text-term-purple">"location"</span><span class="text-term-muted">: </span><span class="text-term-green">"Santiago, Chile"</span><span class="text-term-muted">,</span></p>
+          <p><span class="text-term-purple">"focus"</span><span class="text-term-muted">: </span><span class="text-term-green">"React · NestJS · Ionic/Capacitor"</span><span class="text-term-muted">,</span></p>
+          <p><span class="text-term-purple">"open_to"</span><span class="text-term-muted">: </span><span class="text-term-green">"Full Stack · Frontend roles"</span></p>
+        </div>
+        <p class="text-term-muted">}</p>
+      </div>
+    </section>
+
+    <hr class="border-term-border mb-8" />
+
+    <!-- Experience -->
+    <section class="mb-8">
+      <p class="mb-4 text-sm">
+        <span class="text-term-blue">cami</span><span class="text-term-muted">@</span><span class="text-term-green">dev</span><span class="text-term-muted">:</span><span class="text-term-blue">~</span><span class="text-term-text"> $ </span><span>cat experience.log</span>
+      </p>
+
+      <!-- Job 1 -->
+      <div class="pl-6 mb-6">
+        <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+          <div>
+            <span class="text-term-orange font-bold">Full Stack Developer</span>
+            <span class="text-term-muted"> @ </span>
+            <span class="text-term-purple">Seidor</span>
+            <span class="text-term-muted text-xs"> — Mi Mall · Cenco Malls Omnichannel App</span>
+          </div>
+          <span class="text-term-muted text-xs">sept 2025 → present · 9m</span>
+        </div>
+        <ul class="space-y-1 text-sm">
+          <li><span class="text-term-muted">▸ </span>Integración de <span class="text-term-blue">Salesforce</span> vía middleware propio — redujo tiempos de clasificación y respuesta en servicio al cliente</li>
+          <li><span class="text-term-muted">▸ </span>Flujos completos de backend con <span class="text-term-blue">NestJS</span> sobre arquitectura serverless en <span class="text-term-blue">AWS</span></li>
+          <li><span class="text-term-muted">▸ </span>App híbrida desplegada en <span class="text-term-blue">iOS</span> y <span class="text-term-blue">Android</span> con Ionic/Capacitor</li>
+          <li><span class="text-term-muted">▸ </span>Arquitectura hexagonal en Frontend · Pipelines monorepo en GitLab</li>
+          <li><span class="text-term-muted">▸ </span>Observabilidad con <span class="text-term-blue">New Relic</span> · Queries y operaciones sobre <span class="text-term-blue">Elasticsearch</span> como capa de datos</li>
+        </ul>
+      </div>
+
+      <hr class="border-term-border mb-6" />
+
+      <!-- Job 2 -->
+      <div class="pl-6 mb-6">
+        <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+          <div>
+            <span class="text-term-orange font-bold">Frontend Developer</span>
+            <span class="text-term-muted"> @ </span>
+            <span class="text-term-purple">Seidor</span>
+            <span class="text-term-muted text-xs"> — Cencosud</span>
+          </div>
+          <span class="text-term-muted text-xs">abr 2025 → ago 2025 · 5m</span>
+        </div>
+        <ul class="space-y-1 text-sm">
+          <li><span class="text-term-muted">▸ </span>Diseño e implementación de interfaces web con <span class="text-term-blue">React</span> · <span class="text-term-blue">TypeScript</span> · Tailwind CSS</li>
+          <li><span class="text-term-muted">▸ </span>Componentes reutilizables y UX alineada a estándares del producto</li>
+        </ul>
+      </div>
+
+      <hr class="border-term-border mb-6" />
+
+      <!-- Job 3 -->
+      <div class="pl-6 mb-6">
+        <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+          <div>
+            <span class="text-term-orange font-bold">Frontend Developer</span>
+            <span class="text-term-muted"> @ </span>
+            <span class="text-term-purple">Innomar</span>
+            <span class="text-term-muted text-xs"> — Cencosud</span>
+          </div>
+          <span class="text-term-muted text-xs">jul 2024 → mar 2025 · 9m</span>
+        </div>
+        <ul class="space-y-1 text-sm">
+          <li><span class="text-term-muted">▸ </span>Interfaces web con React · TypeScript · Tailwind CSS en entorno enterprise</li>
+          <li><span class="text-term-muted">▸ </span>Integración de APIs REST y GraphQL · Colaboración con equipos UX/UI y QA</li>
+        </ul>
+      </div>
+
+      <hr class="border-term-border mb-6" />
+
+      <!-- Job 4 -->
+      <div class="pl-6">
+        <div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+          <div>
+            <span class="text-term-orange font-bold">Full Stack Developer Junior</span>
+            <span class="text-term-muted"> @ </span>
+            <span class="text-term-purple">PROACTIVESS SPA</span>
+          </div>
+          <span class="text-term-muted text-xs">sept 2022 → jul 2024 · 1a 11m</span>
+        </div>
+        <ul class="space-y-1 text-sm">
+          <li><span class="text-term-muted">▸ </span>Desarrollo, diseño y planificación de proyectos end-to-end</li>
+          <li><span class="text-term-muted">▸ </span>Colaboración con equipos interdisciplinarios en entorno remoto</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="border-term-border mb-8" />
+
+    <!-- Stack -->
+    <section class="mb-8">
+      <p class="mb-4 text-sm">
+        <span class="text-term-blue">cami</span><span class="text-term-muted">@</span><span class="text-term-green">dev</span><span class="text-term-muted">:</span><span class="text-term-blue">~</span><span class="text-term-text"> $ </span><span>ls ./stack --all</span>
+      </p>
+      <div class="pl-6 space-y-4 text-sm">
+
+        <div>
+          <p class="text-term-muted mb-2">// frontend</p>
+          <div>
+            <span class="tag text-term-blue border-[#1f4068] bg-[#0d2137]">React 18</span>
+            <span class="tag text-term-blue border-[#1f4068] bg-[#0d2137]">TypeScript</span>
+            <span class="tag text-term-blue border-[#1f4068] bg-[#0d2137]">Ionic/Capacitor 7</span>
+            <span class="tag text-term-blue border-[#1f4068] bg-[#0d2137]">Tailwind CSS</span>
+            <span class="tag text-term-blue border-[#1f4068] bg-[#0d2137]">Zustand</span>
+            <span class="tag text-term-blue border-[#1f4068] bg-[#0d2137]">Shadcn</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-term-muted mb-2">// backend</p>
+          <div>
+            <span class="tag text-term-green border-[#1a3a1f] bg-[#0d2010]">NestJS 11</span>
+            <span class="tag text-term-green border-[#1a3a1f] bg-[#0d2010]">Node.js</span>
+            <span class="tag text-term-green border-[#1a3a1f] bg-[#0d2010]">GraphQL</span>
+            <span class="tag text-term-green border-[#1a3a1f] bg-[#0d2010]">REST APIs</span>
+            <span class="tag text-term-green border-[#1a3a1f] bg-[#0d2010]">Salesforce</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-term-muted mb-2">// data & infra</p>
+          <div>
+            <span class="tag text-term-yellow border-[#3a2e00] bg-[#1a1500]">AWS</span>
+            <span class="tag text-term-yellow border-[#3a2e00] bg-[#1a1500]">Elasticsearch</span>
+            <span class="tag text-term-yellow border-[#3a2e00] bg-[#1a1500]">PostgreSQL</span>
+            <span class="tag text-term-yellow border-[#3a2e00] bg-[#1a1500]">MySQL</span>
+            <span class="tag text-term-yellow border-[#3a2e00] bg-[#1a1500]">New Relic</span>
+            <span class="tag text-term-yellow border-[#3a2e00] bg-[#1a1500]">GitLab</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-term-muted mb-2">// mobile</p>
+          <div>
+            <span class="tag text-term-pink border-[#3a0028] bg-[#1a0010]">iOS · Xcode</span>
+            <span class="tag text-term-pink border-[#3a0028] bg-[#1a0010]">Android · Android Studio</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="border-term-border mb-8" />
+
+    <!-- Education -->
+    <section class="mb-8">
+      <p class="mb-4 text-sm">
+        <span class="text-term-blue">cami</span><span class="text-term-muted">@</span><span class="text-term-green">dev</span><span class="text-term-muted">:</span><span class="text-term-blue">~</span><span class="text-term-text"> $ </span><span>cat education.md</span>
+      </p>
+      <div class="pl-6 text-sm space-y-2">
+        <p>
+          <span class="text-term-orange">▸ Ingeniería de Ejecución en Software</span>
+          <span class="text-term-muted"> — Universidad Técnica Federico Santa María</span>
+          <span class="tag text-term-green border-[#1a3a1f] bg-[#0d2010] ml-2">en curso</span>
+        </p>
+        <p>
+          <span class="text-term-orange">▸ Técnico en Programación y Análisis de Sistemas</span>
+          <span class="text-term-muted"> — AIEP · 2024</span>
+        </p>
+        <div class="mt-3">
+          <p class="text-term-muted mb-1">// certifications</p>
+          <div class="pl-2 space-y-0.5 text-term-muted">
+            <p>· Frontend Developer — Platzi</p>
+            <p>· Git and GitHub Professional Course — Platzi</p>
+            <p>· EF SET English Certificate B1 — EF Standard English Test</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status bar -->
+    <div class="border-t border-term-border pt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-term-muted">
+      <span>status: <span class="text-term-green">open to work</span></span>
+      <span>seniority: <span class="text-term-green">semi-senior</span></span>
+      <span>lang: <span class="text-term-green">ES · EN</span></span>
+      <span>mode: <span class="text-term-green">hybrid / remote</span></span>
+      <span>updated: <span class="text-term-green">may 2026</span></span>
+    </div>
+
+    <!-- Cursor line -->
+    <div class="mt-6 text-sm">
+      <span class="text-term-blue">cami</span><span class="text-term-muted">@</span><span class="text-term-green">dev</span><span class="text-term-muted">:</span><span class="text-term-blue">~</span><span class="text-term-text"> $ </span><span class="cursor"></span>
+    </div>
+
+  </main>
+</body>
+</html>
+
